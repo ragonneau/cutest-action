@@ -1,0 +1,17 @@
+name: 'cutest-action'
+author: 'Tom M. Ragonneau'
+description: 'Install CUTEst on Linux and macOS'
+outputs:
+  version:
+    description: 'The version of CUTEst that has been installed'
+    value: ${{ steps.cutest-install.outputs.version }}
+runs:
+  using: 'composite'
+  steps:
+    - run: echo "${{ github.action_path }}" >> $GITHUB_PATH
+      shell: bash
+    - run: pwd
+      shell: bash
+    - id: cutest-install
+      run: install.sh
+      shell: bash
