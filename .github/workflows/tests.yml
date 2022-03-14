@@ -23,3 +23,6 @@ jobs:
 
       - name: Install cutest
         uses: ./
+
+      - name: Run tests
+        run: cd $CUTEST/src ; make -f $CUTEST/makefiles/$MYARCH test

@@ -14,10 +14,10 @@ TOPDIR=$PWD
 # Download the source files
 echo ' Downloading source files...'
 git config --global advice.detachedHead false
-git clone -q -b v2.0.4 --depth 1 https://github.com/ralna/ARCHDefs $ARCHDEFS &
-git clone -q -b v2.0.3 --depth 1 https://github.com/ralna/SIFDecode $SIFDECODE &
-git clone -q -b v2.0.3 --depth 1 https://github.com/ralna/CUTEst $CUTEST &
-git clone -q -b v0.5 --depth 1 https://bitbucket.org/optrove/sif $MASTSIF &
+git clone -b v2.0.4 --depth 1 https://github.com/ralna/ARCHDefs $ARCHDEFS &
+git clone -b v2.0.3 --depth 1 https://github.com/ralna/SIFDecode $SIFDECODE &
+git clone -b v2.0.3 --depth 1 https://github.com/ralna/CUTEst $CUTEST &
+git clone --depth 1 https://bitbucket.org/optrove/sif $MASTSIF &
 wait
 
 # Set architecture/compiler
